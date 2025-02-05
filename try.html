@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Study</title>
+    <link rel="icon" href="pics/chips.png" type="image/icon type">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&amp;family=Secular+One&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Rubik+Scribble&display=swap" rel="stylesheet">
+
+    <style>
+        .carousel-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 60%; /* מקסימום רוחב למחשבים */
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 30%;
+            text-align: center;
+            padding: 3%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8%;
+            margin-bottom: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .carousel-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-item span {
+            display: block;
+            font-size: 100%;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* כפתורי ניווט מחוץ לקרוסלה */
+        .carousel-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .carousel-btn {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* התאמות למסכים קטנים */
+        @media (max-width: 768px) {
+            .carousel-container {
+                max-width: 90%;
+            }
+
+            .carousel-navigation {
+                width: 85%; /* מתיחת השטח עבור כפתורים */
+            }
+
+            .carousel-item {
+                flex: 0 0 40%;
+            }
+
+            .carousel-item img {
+                width: 70%;
+            }
+
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-container {
+                max-width: 100%;
+            }
+
+            .carousel-navigation {
+                width: 100%;
+            }
+
+            .carousel-item {
+                flex: 0 0 50%;
+            }
+
+            .carousel-item img {
+                width: 60%;
+            }
+
+            .carousel-btn {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.querySelector(".carousel");
+            const leftBtn = document.querySelector(".carousel-btn.left");
+            const rightBtn = document.querySelector(".carousel-btn.right");
+
+            let currentIndex = 0;
+            const items = document.querySelectorAll(".carousel-item");
+            const totalItems = items.length;
+            const visibleItems = Math.floor(document.querySelector(".carousel-container").clientWidth / items[0].clientWidth);
+
+            function updateCarousel() {
+                const itemWidth = items[0].clientWidth; // רוחב פריט אחד
+                const offset = -currentIndex * itemWidth;
+                carousel.style.transform = `translateX(${offset}px)`;
+            }
+
+            function moveRight() {
+                if (currentIndex < totalItems - visibleItems) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            }
+
+            function moveLeft() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            }
+
+            rightBtn.addEventListener("click", moveRight);
+            leftBtn.addEventListener("click", moveLeft);
+
+            updateCarousel(); // קריאה ראשונית לעדכון הקרוסלה
+        });
+    </script>
+</head>
+<body>
+    <table class = "Table" id = "container" cellpadding = "5" cellspacing = "0" border = "1">
+        <tr style = "background-color: rgb(0, 0, 0, 0.10);">
+            <td class = "Logo">
+                <a href = "index.html"><img src="pics/logo.png" width="90%"></a>
+            </td>
+
+            <td class = "Instagram">
+                <a href = "https://www.instagram.com/perfect_study1?igsh=MWJtYm11czZpdXRhYQ== " target="_blank"><img width="70%" src="pics/instagram.png"></a> <!--אינסטגרם-->
+            </td>
+        </tr>
+        <tr class = "Nav">
+            <td colspan = "3" style="border: 2px solid rgba(128, 128, 128, 0.8);">
+                <div class="nav-buttons">
+                    <a href="index.html">דף הבית</a>
+                    <a href="about.html">אודות</a>
+                    <a href="allsubjects.html">לכל המקצועות</a>
+                    <a href="https://sagiv23.github.io">צור קשר</a>
+                    <a href="https://sagiv23.github.io">התחברות</a>
+                    <a href="https://sagiv23.github.io">הרשמה</a>
+                </div>
+            </td>
+        </tr>
+
+        <tr class = "In_The_Page">
+            <td colspan = "3" valign = "top" style="border: 2px solid white;">
+                <div class="content">
+                    <img src="pics/index.png" style="width: 100%;"> 
+                    <br><br><br><br>
+
+                    <div class="carousel-navigation">
+                        <button class="carousel-btn left" onclick="updateCarousel()">&#8592;</button>
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="מתמטיקה">
+                                        <span>מתמטיקה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="אנגלית">
+                                        <span>אנגלית</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="מדעי המחשב">
+                                        <span>מדעי המחשב</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="פיזיקה">
+                                        <span>פיזיקה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="מדעים">
+                                        <span>מדעים</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="ביולוגיה">
+                                        <span>ביולוגיה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="אלקטרוניקה">
+                                        <span>אלקטרוניקה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="כימיה">
+                                        <span>כימיה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="ביוטכנולוגיה">
+                                        <span>ביוטכנולוגיה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="גאוגרפיה">
+                                        <span>גאוגרפיה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="אזרחות">
+                                        <span>אזרחות</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="עברית">
+                                        <span>עברית</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="ערבית">
+                                        <span>ערבית</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="היסטוריה">
+                                        <span>היסטוריה</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="תנך">
+                                        <span>תנ"ך</span>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://sagiv23.github.io" target="_blank">
+                                        <img src="pics/book.png" alt="ספרות">
+                                        <span>ספרות</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn right" onclick="updateCarousel()">&#8594;</button>
+                    </div>                    
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
