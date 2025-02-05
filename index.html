@@ -79,6 +79,10 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        .carousel-btn.right {
+            margin-left: 5%;
+        }
+        
         @media (max-width: 768px) {
             .carousel-container {
                 max-width: 90%;
@@ -115,8 +119,9 @@
             }
 
             .carousel-btn {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -133,7 +138,7 @@
 
             function getVisibleItems() {
                 const containerWidth = document.querySelector(".carousel-container").clientWidth;
-                const itemWidth = items[0].clientWidth * 1.1; // התחשבות ברווחים קטנים יותר
+                const itemWidth = items[0].clientWidth * 1.1;
                 return Math.floor(containerWidth / itemWidth);
             }
 
@@ -256,6 +261,31 @@
                                 <div class="carousel-item">
                                     <a href="404.html">
                                         <img src="pics/books/azrhaot.png" alt="אזרחות">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="404.html">
+                                        <img src="pics/books/hebrew.png" alt="עברית">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="404.html">
+                                        <img src="pics/books/arabic.png" alt="ערבית">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="404.html">
+                                        <img src="pics/books/history.png" alt="היסטוריה">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="404.html">
+                                        <img src="pics/books/bible.png" alt="תנך">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="404.html">
+                                        <img src="pics/books/sifrot.png" alt="ספרות">
                                     </a>
                                 </div>
                             </div>
