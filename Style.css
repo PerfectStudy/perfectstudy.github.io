@@ -19,7 +19,7 @@ body {
     border: 2px solid rgba(128, 128, 128, 0.8);
 }
 .Instagram img{
-    width: 98%;
+    width: 90%;
 }
 .Instagram img:hover{
     transform: scale(1.05); 
@@ -82,14 +82,7 @@ body {
         width: 30%;
         font-size: 100%;
     }
-}
-@media (max-width: 480px) {
-    .button {
-        width: 37%;
-        font-size: 90%;
-    }
-}
-@media (max-width: 768px) {
+
     .nav-buttons {
         gap: 1rem;
     }
@@ -98,10 +91,22 @@ body {
         font-size: 100%;
         padding: 0.3rem;
     }
+
+    .Instagram img{
+        width: 100%;
+    }
 }
 @media (max-width: 480px) {
+    .button {
+        width: 37%;
+        font-size: 90%;
+    }
     .nav-buttons a {
         font-size: 95%;
+    }
+
+    .Instagram img{
+        width: 100%;
     }
 }
 h1 {
