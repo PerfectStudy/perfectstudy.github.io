@@ -40,12 +40,10 @@ body {
     white-space: nowrap;
     transition: color 0.3s, border-bottom 0.3s;
     padding: 0.5rem;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
 }
 .nav-buttons a:hover {
-    color: #00BFFF;
-    border-bottom: 2px solid #00BFFF;
+    color: #531b1b;
+    border-bottom: 2px solid #531b1b;
 }
 .content {
     margin: 2%;
