@@ -42,12 +42,17 @@
         <tr class = "In_The_Page">
             <td colspan = "3" valign = "top" style="border: 2px solid white;">
                 <div class="content">
-                    <img src="pics/login.png" style="width: 90%;">
-                    <form method="post" runat="server">
+                    <img src="pics/register.png" style="width: 90%;"> 
+                    <form method="post" runat="server" onsubmit="return validateForm();">
                         <table class="form-table">
                             <tr>
                                 <td class="form-label">שם משתמש:</td>
                                 <td><input type="text" id="uName" name="userName"></td>
+                            </tr>
+                            <tr><td colspan="2"><br></td></tr>
+                            <tr>
+                                <td class="form-label">כתובת אימייל:</td>
+                                <td><input type="text" id="email" name="email"></td>
                             </tr>
                             <tr><td colspan="2"><br></td></tr>
                             <tr>
