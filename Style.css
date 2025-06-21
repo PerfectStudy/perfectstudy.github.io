@@ -186,85 +186,104 @@ p {
     }
 }
 
-        form {
-            text-align: center;
-            margin-top: 30px;
-            direction: rtl;
-        }
+form {
+    text-align: center;
+    margin-top: 30px;
+    direction: rtl;
+}
 
-        .form-table {
-            margin: 0 auto;
-            width: 60%;
-        }
+.form-table {
+    margin: 0 auto;
+    width: 60%;
+}
 
-        .form-label {
-            color: black;
-            font-size: 22px;
-            padding: 10px;
-            text-align: right;
-        }
+.form-label {
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+    text-align: right;
+}
 
-        input[type="text"], input[type="password"] {
-            color: black;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 22px;
-            width: 95%;
-            padding: 8px;
-            border: 1px solid black;
-            border-radius: 5px;
-            direction: ltr;
-        }
+input[type="text"], input[type="password"] {
+    color: black;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    width: 95%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    direction: ltr;
+}
 
-        #submit, #reset {
-            background-color: black;
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 20px;
-            margin: 20px 10px;
-            width: 90px;
-            height: 45px;
-            border-radius: 50px;
-            cursor: pointer;
-            border: none;
-        }
+#submit, #reset {
+    background-color: black;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    margin: 20px 10px;
+    width: 90px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
 
-        #submit:hover, #reset:hover {
-            background-color: #333;
-            transition: 0.4s;
-        }
+#submit:hover, #reset:hover {
+    background-color: #333;
+    transition: 0.4s;
+}
 
-        @media (max-width: 768px) {
-            .form-table {
-                width: 90%;
-            }
+@media (max-width: 768px) {
+    .form-table {
+        width: 90%;
+    }
 
-            input[type="text"], input[type="password"] {
-                font-size: 20px;
-            }
+    input[type="text"], input[type="password"] {
+        font-size: 20px;
+    }
 
-            #submit, #reset {
-                font-size: 18px;
-                width: 80px;
-                height: 40px;
-            }
+    #submit, #reset {
+        font-size: 18px;
+        width: 80px;
+        height: 40px;
+    }
 
-            .form-label {
-                font-size: 20px;
-            }
-        }
+    .form-label {
+        font-size: 20px;
+    }
+}
 
-        @media (max-width: 480px) {
-            input[type="text"], input[type="password"] {
-                font-size: 18px;
-            }
+@media (max-width: 480px) {
+    input[type="text"], input[type="password"] {
+        font-size: 18px;
+    }
 
-            .form-label {
-                font-size: 18px;
-            }
+    .form-label {
+        font-size: 18px;
+    }
 
-            #submit, #reset {
-                font-size: 16px;
-                width: 70px;
-                height: 35px;
-            }
-        }
+    #submit, #reset {
+        font-size: 16px;
+        width: 70px;
+        height: 35px;
+    }
+}
+
+.headLine-image, .content-image {
+    width: 88%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .headLine-image, .content-image {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .headLine-image, .content-image {
+        width: 95%;
+    }
+}
